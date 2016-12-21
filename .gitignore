@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+.gitignore
+.idea/
+node_modules/
