@@ -45,6 +45,28 @@ _**Valid Type**_
 
         E.g     { "type":"tweet","action":"subscribe","status":"success" }
 
+**Controlling data flow**
 
+1.  /config/resource
 
+    1.  StreamRetrievalTime -  Tells after how much time, stream should be made available to the client.
+    2.  ResourceGenerationSpeed - Tells after how much time, our generator should generate a resource (tweet/post).
+2.  /config/logger
 
+    1.  enable = Enables the server logging.
+
+**Note:** Node version - 7.2.1
+
+**How to Run Server**
+
+1.  Run command
+
+        node server.js
+
+**How to Run Client**
+
+1.  Run command
+
+        node testClient.js <Client-name> <resource-to-subscribe>
+
+    <Client-name> - Name of the client (not much of use as of now).
