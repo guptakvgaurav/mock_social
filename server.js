@@ -6,13 +6,15 @@
 (() => {
     let path = require('path');
 
-    global.constants = require('./constants'); // make constants available to each and every one.
-    global.config = require('./config');    // make config available to each and every one.
-    global.util = require('./common');      // make util available to each and every one.
     global.appRoot = __dirname;
+    global.model = path.join(global.appRoot, 'model');
     global.commonPath = path.join(global.appRoot, 'common');
     global.configPath = path.join(global.appRoot, 'config');
     global.constantPath = path.join(global.appRoot, 'constants');
+
+    global.constants = require('./constants'); // make constants available to each and every one.
+    global.config = require('./config');    // make config available to each and every one.
+    global.util = require('./common');      // make util available to each and every one.
 })();
 
 const socketUtil = require(global.commonPath).socketUtil;

@@ -3,8 +3,8 @@
  */
 
 let log = require('./logger');
-let TwitterStream = require('./tweetGenerator');
-let FBStream = require('./fbPostGenerator');
+let TwitterStream = require('./twitter.stream');
+let FBStream = require('./facebook.stream');
 let socketUtil = require('./util.socket');
 let ResourceStreamFactory = require('./resource.stream.factory');
 

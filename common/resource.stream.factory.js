@@ -4,8 +4,8 @@
 
 const Resource = global.constants.Resource.Name;
 const ResourceMap = new Map();
-ResourceMap.set(Resource.Tweet, require('./tweetGenerator'))
-ResourceMap.set(Resource.FbPost, require('./fbPostGenerator'))
+ResourceMap.set(Resource.Tweet, require('./twitter.stream'));
+ResourceMap.set(Resource.FbPost, require('./facebook.stream'));
 
 class ResourceStreamFactory {
     requestStream (resource, callback) {

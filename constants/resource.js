@@ -21,5 +21,9 @@ module.exports = {
             code: 'ERR_MULTI_SUBSCRIPTION_ATTEMPTED',
             message: 'Sorry !! You can not subscribe to this resource anymore.'
         }
+    },
+    classNames: {
+        TwitterEvent:'TwitterEvent',
+        FbEvent: 'FbEvent'
     }
 };
