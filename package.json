@@ -5,6 +5,8 @@
   "dependencies": {
     "ramda": "latest",
     "eslint": "latest",
-    "casual": "latest"
+    "casual": "latest",
+    "express": "latest",
+    "body-parser": "latest"
   }
 }

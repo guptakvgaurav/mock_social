@@ -3,7 +3,12 @@
  */
 // server options.
 const serverOptions = {
-    port: 3000
+    api : {
+        port: 3005
+    },
+    tcp : {
+        port: 3000
+    }
 };
 
 module.exports = serverOptions;
