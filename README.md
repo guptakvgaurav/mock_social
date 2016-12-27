@@ -1,6 +1,6 @@
 **Introduction**
 
-A simple mock server which allows the user to subscribe an resource. Upon successful subscription server offers stream of resource to the callee.
+A simple mock server which allows the user to subscribe a resource. Upon successful subscription server offers stream of resource to the callee.
 
 _**Resource**_
 
