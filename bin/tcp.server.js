@@ -28,4 +28,4 @@ let server = net.createServer((connection) => {
     connection.on('timeout', () => dispatcher.dispatch(TCP_SOCKET_EVENTS.Timeout));
 });
 
-module.exports.server = server;
+module.exports = server;

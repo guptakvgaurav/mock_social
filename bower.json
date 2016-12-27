@@ -1,0 +1,10 @@
+{
+  "name": "mock_social",
+  "version": "v0.0.1",
+  "dependencies": {
+    "angular": "1.5.x",
+    "bootstrap": "3.3.7",
+    "angular-bootstrap": "2.3.2",
+    "angular-ui-router": "0.3.2"
+  }
+}

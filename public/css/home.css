@@ -1,0 +1,12 @@
+
+.list-item-li {
+    list-style-type: none;
+}
+
+.list-item-demo-btn {
+    border-radius: 20px;
+}
+
+.list-item-title {
+    cursor: pointer;
+}

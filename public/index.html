@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- load third party css-->
+    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
+    <!-- load custom css-->
+    <link rel="stylesheet" href="./css/home.css">
+
+    <script src="../angular/angular.js"></script>
+    <script src="../angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="./app.js"></script>
+    <!-- load components -->
+    <script src="./components/component.item.js"></script>
+    <!-- load constants -->
+    <!-- load configs   -->
+
+    <!-- load controllers -->
+    <script src="./controllers/controller.home.js"></script>
+    <script src="./controllers/controller.xss.js"></script>
+    <script src="./controllers/controller.csrf.js"></script>
+    <title>Title</title>
+</head>
+<body ng-app="mockSocial">
+    <div class="container">
+        <ui-view></ui-view>
+    </div>
+</body>
+</html>

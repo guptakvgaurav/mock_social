@@ -4,10 +4,13 @@
 
 let express = require('express');
 const bodyParser = require('body-parser');
+const Path = require('path');
 const modules = require(global.modules);
 
 let app = express();
 
+app.use(express.static('bower_components'));
+app.use(express.static('public'));
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(modules.acl);
@@ -15,4 +18,4 @@ app.use(modules.acl);
 app.use(bodyParser.json());
 
 app.use('/api/:version/', modules.apis);
-module.exports.server = app;
+module.exports = app;
