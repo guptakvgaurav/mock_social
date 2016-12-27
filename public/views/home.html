@@ -3,9 +3,14 @@
     <ul>
         <li ng-repeat="item in items" class="row list-item-li" >
             <!--<list-item item="item"></list-item>-->
-            <div uib-alert class="alert-danger list-item-title col-xs-10 col-md-10" ng-click="item.isCollapsed = !item.isCollapsed">
-                {{ item.title }}
-                <button type="button" class="btn btn-success pull-right list-item-demo-btn" ui-sref="{{ item.demoState }}"> Demo </button>
+            <div uib-alert class="alert-danger col-xs-10 col-md-10" ng-click="item.isCollapsed = !item.isCollapsed">
+                <div class="list-item-title-wrapper">
+                    <p class="list-item-title"> {{ item.title }} </p>
+                    <button type="button" class="btn btn-success pull-right list-item-demo-btn" ui-sref="{{ item.demoState }}"> Demo </button>
+                </div>
+                <div class="list-item-tag-wrapper">
+                    <div ng-repeat="tag in item.tags" class="btn btn-sm btn-info list-item-tag"> {{ tag }}</div>
+                </div>
             </div>
             <div uib-collapse="item.isCollapsed" class="col-md-8 col-xs-8">
                 <div class="well well-lg">{{ item.description }}</div>

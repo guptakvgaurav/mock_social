@@ -10,3 +10,16 @@
 .list-item-title {
     cursor: pointer;
 }
+
+.list-item-tag {
+    margin-left: 4px;
+    margin-top: 6px;
+}
+
+.list-item-tag-wrapper {
+    display: flex;
+}
+
+.list-item-title-wrapper {
+    display: flex;
+}
