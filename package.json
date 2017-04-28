@@ -1,12 +1,16 @@
 {
   "name": "application-name",
-  "version": "0.0.1",
-  "start": "node server",
+  "version": "0.0.2",
+  "start": "node index",
   "dependencies": {
     "ramda": "latest",
     "eslint": "latest",
     "casual": "latest",
     "express": "latest",
-    "body-parser": "latest"
+    "body-parser": "latest",
+    "lodash": "latest"
+  },
+  "scripts": {
+    "start": "node index"
   }
 }

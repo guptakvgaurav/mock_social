@@ -33,7 +33,9 @@ class CommonStream extends Stream.Readable{
                 model = new Models.TwitterEvent();
             } else if ( this.model == 'FbEvent') {
                 model = new Models.FbEvent();
-            } else {
+            } else if( this.model == 'MeetupEvent') {
+                model = new Models.MeetupEvent();
+            }else {
                 throw new TypeError('Invalid model');
             }
             let buffer = Buffer.from(JSON.stringify(model));

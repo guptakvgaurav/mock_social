@@ -5,7 +5,8 @@
 module.exports = {
     Name:{
         Tweet: 'tweet',
-        FbPost: 'fbpost'
+        FbPost: 'fbpost',
+        Meetup: 'meetup'
     },
     ActionResult: {
         Success: 'success',
@@ -24,6 +25,7 @@ module.exports = {
     },
     classNames: {
         TwitterEvent:'TwitterEvent',
+        MeetupEvent: 'MeetupEvent',
         FbEvent: 'FbEvent'
     }
 };

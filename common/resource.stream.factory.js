@@ -6,6 +6,7 @@ const Resource = global.constants.Resource.Name;
 const ResourceMap = new Map();
 ResourceMap.set(Resource.Tweet, require('./twitter.stream'));
 ResourceMap.set(Resource.FbPost, require('./facebook.stream'));
+ResourceMap.set(Resource.Meetup, require('./meetup.stream'));
 
 class ResourceStreamFactory {
     requestStream (resource, callback) {

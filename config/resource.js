@@ -5,10 +5,12 @@
 module.exports = {
     StreamRetrievalTime : new Map([
         ['tweet', 1000],      // should be same as value of Const.Resource.Name.Tweet
-        ['fbpost', 1000]      // should be same as value of Const.Resource.Name.FbPost
+        ['fbpost', 1000],      // should be same as value of Const.Resource.Name.FbPost
+        ['meetup', 2000]      // should be same as value of Const.Resource.Name.FbPost
     ]),
     ResourceGenerationSpeed: {
         Tweet: 1000,
-        FbPost: 100
+        FbPost: 1500,
+        Meetup: 2000
     }
 };

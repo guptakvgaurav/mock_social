@@ -31,6 +31,26 @@ let unSubscribeTweet = (connection) => {
 };
 
 /**
+ * Manage un-subscription of tweet resource. If already subscribed, then successfully un-subscribe it, otherwise failure.
+ * @param {object} connection
+ * */
+let unSubscribeMeetUp = (connection) => {
+    // if already subscribed, remove it.
+    let reply = { action : PermittedActions.UnSubscribe, type: Resource.Meetup };
+    if (connection.isAlreadySubscribed(Resource.Meetup)) {
+        reply.status = connection.unSubscribe(Resource.Meetup) ? ActionResult.Success : ActionResult.Failure;
+    } else {
+        log(`[Warning] ${connection} is not subscribed to ${Resource.Meetup}, so unSubscribe will result in failure`)
+        reply.status = ActionResult.Failure;
+    }
+    connection.write(JSON.stringify(reply));
+};
+
+let getResourceByType = (type) => {
+    return Object.keys(Resource).map(_keys => Resource[_keys]).find(_resource => _resource === type);
+};
+
+/**
  * Does the basic checking to validate the subscription action. If valid, return success template, otherwise error.
  * @param {object} connection
  * @param {object} _data
@@ -45,7 +65,7 @@ let prepareSubscriptionResult = (connection, _data) => {
             reply.reason = ErrorCodes.MultipleSubscriptionAttempted;
         } else {
             reply.status = ActionResult.Success;
-            connection.addResourceToSubscriptionList(Resource[_data.type]);
+            connection.addResourceToSubscriptionList(getResourceByType(_data.type));
         }
     } catch (e) {
         log(`[Error] ${e}`)
@@ -82,6 +102,9 @@ let manageUnSubscribe = (connection, _data) => {
     switch(_data.type) {
         case Resource.tweet:
             unSubscribeTweet(connection);
+            break;
+        case Resource.Meetup:
+            unSubscribeMeetUp(connection);
             break;
         default:
             break;

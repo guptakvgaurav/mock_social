@@ -9,6 +9,7 @@
  * @return {Set} copy of resource set
  * */
 module.exports.addResourceToSubscriptionList = function (resource) {
+    console.log('**** Adding resource ****', resource);
     if(!this.subscribedResourceSet)  this.subscribedResourceSet = new Set();     // create a set, if does not exist.
     if(this.subscribedResourceSet.has(resource)) throw new TypeError("ERR_RESOURCE_ALREADY_SUBSCRIBED");     // Over-subscribing is not permitted.
 

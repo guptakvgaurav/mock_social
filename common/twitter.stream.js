@@ -6,7 +6,7 @@ const CommonStream = require('./common.stream');
 
 class TwitterMockStream extends CommonStream{
     constructor(options = {}) {
-        options.model = global.constants.Resource.classNames;
+        options.model = global.constants.Resource.classNames.TwitterEvent;
         options.generateIn = global.config.RESOURCE.ResourceGenerationSpeed.Tweet;
         super(options);
     }

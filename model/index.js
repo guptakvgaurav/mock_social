@@ -5,6 +5,8 @@
 "use strict";
 module.exports.FbEvent = require('./FbEvent');
 module.exports.TwitterEvent = require('./TwitterEvent');
+module.exports.MeetupEvent = require('./MeetupEvent');
+
 module.exports.getObject = (modelName) => {
     console.log('In getObject');
     let modelClass = {} || module.exports[modelName];
